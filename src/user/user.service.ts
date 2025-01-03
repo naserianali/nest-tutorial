@@ -2,7 +2,7 @@ import { Injectable } from "@nestjs/common";
 
 @Injectable()
 export class UserService {
-  private users: any = [];
+  private users: any[] = [];
 
   fetchAll() {
     return this.users;
@@ -10,6 +10,7 @@ export class UserService {
 
   create(userData: any) {
     this.users.push(userData);
+    return "User Created Successfully";
   }
 
   findOne(id: number) {
